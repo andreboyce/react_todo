@@ -10,6 +10,20 @@ Linux or Windows system running docker
 
 Expose ports 3000 (default)
 
+### Commands
+
+;start server
+
+node src/server/app.js &
+
+;start client
+
+(cd src/client && exec npm start &)
+
+;kill client and server, where n are the results of starting the processes in the background
+
+kill %n; kill %n;
+
 ### Components
 
 Database - Mysql
