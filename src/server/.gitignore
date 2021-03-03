@@ -1,0 +1,24 @@
+# ignore everything
+*
+# But descend into directories
+!*/
+
+# ignore these files
+index.php
+index.html
+
+# ignore these directories
+node_modules
+
+# whitelist these files
+!.gitignore
+!package.json
+!package-lock.json
+!LICENSE
+!README.md
+!RENAME_TO.env
+
+# whitelist these directories
+#!/release/**
+
+# not git does not like to keep track of empty directories so you may need to put atleast one file in a directory for it to be tracked

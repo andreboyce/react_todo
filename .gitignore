@@ -1,0 +1,8 @@
+# ignore these directories
+node_modules
+
+# ignore these files
+index.php
+index.html
+src/client/.env
+src/server/.env

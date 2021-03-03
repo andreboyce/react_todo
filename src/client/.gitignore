@@ -1,0 +1,27 @@
+# ignore everything
+*
+# But descend into directories
+!*/
+
+# ignore these files
+index.php
+index.html
+
+# ignore these directories
+node_modules
+
+# whitelist these files
+!.gitignore
+!.dockerignore
+!Dockerfile
+!LICENSE
+!package.json
+!package-lock.json
+!wait-for-it.sh
+
+# whitelist these directories
+!/build/**
+!/public/**
+!/src/**
+
+# not git does not like to keep track of empty directories so you may need to put atleast one file in a directory for it to be tracked
