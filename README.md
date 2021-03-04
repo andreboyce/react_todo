@@ -20,19 +20,19 @@ Server - NodeJS Express
 
 ## Commands
 
-####start server
+#### start server
 
 src/start.sh
 
-####start client
+#### start client
 
 src/stop.sh
 
-####Push changes to guthub
+#### Push changes to guthub
 
 ./push.sh
 
-####Coding standards
+#### Coding standards
 
 eslint src/server src/client
 
