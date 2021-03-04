@@ -10,6 +10,14 @@ Linux or Windows system running docker
 
 Expose ports 3000 (default)
 
+## Install
+
+git clone https://github.com/andreboyce/react_todo.git
+
+cd rtodo
+
+src/start.sh
+
 ## Components
 
 Database - Mysql
