@@ -13,6 +13,8 @@ MESSAGE=$1
 if [ -z "$MESSAGE" ]
 then
    MESSAGE="update";
+else
+   :
 fi
 
 git add -A
