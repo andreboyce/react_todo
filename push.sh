@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#echo $1
-
+#rm -rf .git
 #git init
 #git add -A
 #git commit -m "first commit"
