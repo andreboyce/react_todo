@@ -6,5 +6,4 @@ index.php
 index.html
 src/client/.env
 src/server/.env
-install.sh
 install_test.sh
