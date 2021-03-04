@@ -6,3 +6,5 @@ index.php
 index.html
 src/client/.env
 src/server/.env
+install.sh
+
