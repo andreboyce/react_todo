@@ -12,17 +12,21 @@ Expose ports 3000 (default)
 
 ### Commands
 
-;start server
+\#start server
 
-node src/server/app.js &
+src/start.sh
 
-;start client
+\#start client
 
-(cd src/client && exec npm start &)
+src/stop.sh
 
-;kill client and server, where n are the results of starting the processes in the background
+### push to guthub
 
-kill %n; kill %n;
+./push.sh
+
+### Coding standards
+
+eslint src/server src/client
 
 ### Components
 
@@ -35,4 +39,5 @@ Server - NodeJS Express
 ### Resources
 
 create-react-app docs env variables
+
 https://create-react-app.dev/docs/advanced-configuration/
