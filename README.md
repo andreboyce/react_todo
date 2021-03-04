@@ -2,13 +2,21 @@
 
 A todo list application written in NodeJS using React
 
-### Requirements
+## Requirements
 
 Linux server capable of running Mysql and NodeJS concurrently
 
 Linux or Windows system running docker
 
 Expose ports 3000 (default)
+
+## Components
+
+Database - Mysql
+
+Client - NodeJS React Creat App
+
+Server - NodeJS Express
 
 ### Commands
 
@@ -20,21 +28,13 @@ src/start.sh
 
 src/stop.sh
 
-### push to guthub
+### Push changes to guthub
 
 ./push.sh
 
 ### Coding standards
 
 eslint src/server src/client
-
-### Components
-
-Database - Mysql
-
-Client - NodeJS React Creat App
-
-Server - NodeJS Express
 
 ### Resources
 
