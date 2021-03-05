@@ -10,6 +10,10 @@ if [[ $EUID -ne 0 ]];
       exit 1;
 fi
 
+PORT=3000
+HOST=rtodo.anlicor.win
+REACT_APP_SERVER_HOST=rtodo.anlicor.win
+REACT_APP_SERVER_PORT=8082
 MYSQL_USER=$(whoami);
 MYSQL_PASSWORD=
 MYSQL_DB=rtodo_db;
@@ -22,6 +26,8 @@ else
    :
 fi
 
-#mysqldump -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DB > src/mysql/"${MYSQL_DB}.sql";
+mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DB <  src/mysql/"${MYSQL_DB}.sql";
 
-mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DB <  src/mysql/"${MYSQL_DB}.sql"
+echo "Run ./start.sh to start";
+echo "Run ./stop.sh to stop";
+echo "visit localhost:3000";
