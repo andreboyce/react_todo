@@ -16,6 +16,8 @@ git clone https://github.com/andreboyce/react_todo.git
 
 cd rtodo
 
+./install.sh
+
 src/start.sh
 
 ## Components

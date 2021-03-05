@@ -10,10 +10,10 @@ if [[ $EUID -ne 0 ]];
       exit 1;
 fi
 
-PORT=3000
-HOST=rtodo.anlicor.win
-REACT_APP_SERVER_HOST=rtodo.anlicor.win
-REACT_APP_SERVER_PORT=8082
+PORT=3000;
+HOST=rtodo.anlicor.win;
+REACT_APP_SERVER_HOST=rtodo.anlicor.win;
+REACT_APP_SERVER_PORT=8082;
 MYSQL_USER=$(whoami);
 MYSQL_PASSWORD=
 MYSQL_DB=rtodo_db;
