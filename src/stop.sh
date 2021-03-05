@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "kill $RTODO_SERVER_PID";
-kill $RTODO_SERVER_PID;
-
-echo "kill $RTODO_CLIENT_PID";
-kill $RTODO_CLIENT_PID;
+ps -ef | grep $USER | grep 'node' | grep -v grep | awk '{print $2}' | xargs -r kill -9
+ps -ef | grep $USER | grep 'npm'  | grep -v grep | awk '{print $2}' | xargs -r kill -9
+exit 0;
