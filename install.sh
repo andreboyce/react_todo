@@ -108,12 +108,12 @@ echo "REACT_APP_DEFAULT_USERNAME=${REACT_APP_DEFAULT_USERNAME}" >> src/server/.e
 echo "REACT_APP_DEFAULT_PASSWORD=${REACT_APP_DEFAULT_PASSWORD}" >> src/server/.env;
 
 # check for mysql
-if [ -x "$(command -v wget)" ]; then
-  #echo "wget found";
+if [ -x "$(command -v mysql)" ]; then
+  #echo "mysql found";
   :
 else
   #
-  echo "wget not found";
+  echo "mysql not found";
   exit 1;
 fi
 
