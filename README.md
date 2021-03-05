@@ -70,8 +70,6 @@ eslint src/server src/client
 
 ### Directory structure
 
-+-- doc
-
 +-- install.sh
 
 +-- LICENSE
