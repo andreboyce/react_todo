@@ -102,9 +102,9 @@ eslint src/server src/client
 
 +-- tests
 
-    +-- coverage
+|   +-- coverage
 
-    +-- unit
+|   +-- unit
 
 ### Resources
 
