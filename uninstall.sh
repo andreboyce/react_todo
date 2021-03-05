@@ -1,7 +1,5 @@
 #!/bin/bash
 
-BASEDIR=$(dirname "$0")
-echo "$BASEDIR";
-cd ..;
-echo $(pwd);
-#rm -rf $BASEDIR;
+SCRIPTPATH=$(cd -- \"$(dirname $0)\" >/dev/null 2>&1 ; pwd -P);
+#echo "SCRIPTPATH: $SCRIPTPATH";
+rm -rf $SCRIPTPATH;
