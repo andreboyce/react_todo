@@ -73,7 +73,7 @@ fi
 
 echo "Checking for dig";
 if [ -x "$(command -v dig)" ]; then
-  #echo "dig found";
+  echo "dig found";
   :
 else
   echo "dig not found";
@@ -124,10 +124,9 @@ echo "REACT_APP_DEFAULT_PASSWORD=${REACT_APP_DEFAULT_PASSWORD}" >> src/server/.e
 
 # check for mysql
 if [ -x "$(command -v mysql)" ]; then
-  #echo "mysql found";
+  echo "mysql found";
   :
 else
-  #
   echo "mysql not found";
   exit 1;
 fi
