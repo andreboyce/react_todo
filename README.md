@@ -6,13 +6,29 @@ A todo list application written in NodeJS using React
 
 Linux server capable of running Mysql and NodeJS concurrently
 
-Linux or Windows system running docker
+Linux (or Windows System running docker)
 
 Expose ports 3000 (default)
 
-Client app is on localhost:3000
+Client app ( React Creat App ) is on localhost:3000
 
-Server app is on localhost:8082
+Server app ( NodeJS Express API ) is on localhost:8082
+
+Database - Mysql
+
+## Install
+
+git clone https://github.com/andreboyce/react_todo.git
+
+mv react_todo rtodo
+
+cd rtodo
+
+./install.sh
+
+src/start.sh
+
+src/stop.sh # when finished
 
 ### Assignment Requirements
 
@@ -32,28 +48,7 @@ CRUD - Create Read Update Delete
 
 Postman
 
-Jwtn
-
-
-## Install
-
-git clone https://github.com/andreboyce/react_todo.git
-
-cd rtodo
-
-./install.sh
-
-src/start.sh
-
-src/stop.sh # when finished
-
-## Components
-
-Database - Mysql
-
-Client - NodeJS React Creat App
-
-Server - NodeJS Express
+Bonus Points JWTN
 
 ## Commands
 
