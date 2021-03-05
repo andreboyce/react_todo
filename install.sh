@@ -69,14 +69,27 @@ else
   install_node;
 fi
 
-PORT=3000;
-HOST=rtodo.anlicor.win;
-REACT_APP_SERVER_HOST=rtodo.anlicor.win;
+# client env variables
+PUBLIC_IP=$(dig +short myip.opendns.com @resolver1.opendns.com); # public ip address
+CLIENT_PORT=3000;
+CLIENT_HOST=$PUBLIC_IP; # localhost, domain name, or public or private ipaddress
 REACT_APP_SERVER_PORT=8082;
-MYSQL_USER=$(whoami);
+REACT_APP_SERVER_HOST=$PUBLIC_IP;
+
+touch src/client/.env;
+echo "" > src/client/.env;
+echo "PORT=${PORT}" >> src/client/.env;
+echo "HOST=${HOST}" >> src/client/.env;
+echo "REACT_APP_SERVER_HOST=${REACT_APP_SERVER_HOST}" >> src/client/.env;
+echo "REACT_APP_SERVER_PORT=${REACT_APP_SERVER_PORT}" >> src/client/.env;
+echo "REACT_APP_DEFAULT_USERNAME=${REACT_APP_DEFAULT_USERNAME}" >> src/client/.env;
+echo "REACT_APP_DEFAULT_PASSWORD=${REACT_APP_DEFAULT_PASSWORD}" >> src/client/.env;
+
+# server env variables
 MYSQL_PASSWORD=
 MYSQL_DB=rtodo_db;
-
+MYSQL_USER=$(whoami);
+SERVER_DB_HOST=localhost;
 if [ -z "$MYSQL_PASSWORD" ]
 then
    echo "Type the password ${MYSQL_USER}, followed by [ENTER]:";
@@ -85,12 +98,27 @@ else
    :
 fi
 
-mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DB <  src/mysql/"${MYSQL_DB}.sql";
+touch src/server/.env;
+echo "" > src/server/.env;
+echo "MYSQL_PASSWORD=${MYSQL_PASSWORD}" >> src/server/.env;
+echo "MYSQL_DB=${MYSQL_DB}" >> src/server/.env;
+echo "MYSQL_USER=${MYSQL_USER}" >> src/server/.env;
+echo "SERVER_DB_HOST=${SERVER_DB_HOST}" >> src/server/.env;
+echo "REACT_APP_DEFAULT_USERNAME=${REACT_APP_DEFAULT_USERNAME}" >> src/server/.env;
+echo "REACT_APP_DEFAULT_PASSWORD=${REACT_APP_DEFAULT_PASSWORD}" >> src/server/.env;
 
-mv src/server/RENAME_TO.env src/server/.env
+# check for mysql
+if [ -x "$(command -v wget)" ]; then
+  #echo "wget found";
+  :
+else
+  #
+  echo "wget not found";
+  exit 1;
+fi
 
-mv src/client/RENAME_TO.env src/client/.env
+mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DB < src/mysql/"${MYSQL_DB}.sql";
 
 echo "Run ./start.sh to start";
-echo "Run ./stop.sh to stop";
 echo "visit ${HOST}:${PORT}";
+echo "Run ./stop.sh to stop";
