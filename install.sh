@@ -69,12 +69,24 @@ else
   install_node;
 fi
 
+echo "Checking for dig";
+if [ -x "$(command -v dig)" ]; then
+  #echo "dig found";
+  :
+else
+  echo "dig not found";
+fi
+
 # client env variables
 PUBLIC_IP=$(dig +short myip.opendns.com @resolver1.opendns.com); # public ip address
 CLIENT_PORT=3000;
 CLIENT_HOST=$PUBLIC_IP; # localhost, domain name, or public or private ipaddress
 REACT_APP_SERVER_PORT=8082;
 REACT_APP_SERVER_HOST=$PUBLIC_IP;
+
+# change working directory to the directory the script exists in which should be rtodo/src
+cd "$(dirname "$0")";
+echo $(pwd);
 
 touch src/client/.env;
 echo "" > src/client/.env;
@@ -92,7 +104,7 @@ MYSQL_USER=$(whoami);
 SERVER_DB_HOST=localhost;
 if [ -z "$MYSQL_PASSWORD" ]
 then
-   echo "Type the password ${MYSQL_USER}, followed by [ENTER]:";
+   echo "Type the Mysql password ${MYSQL_USER}, followed by [ENTER]:";
    read MYSQL_PASSWORD;
 else
    :
