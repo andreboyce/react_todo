@@ -46,6 +46,66 @@ src/stop.sh
 
 eslint src/server src/client
 
+### directory structure
+
++-- doc
+
++-- install.sh
+
++-- LICENSE
+
++-- push.sh
+
++-- README.md
+
++-- src
+
+|   +-- client
+
+|   |   +-- build
+
+|   |   +-- Dockerfile
+
+|   |   +-- package.json
+
+|   |   +-- package-lock.json
+
+|   |   +-- public
+
+|   |   +-- RENAME_TO.env
+
+|   |   +-- src
+
+|   |   +-- wait-for-it.sh
+
+|   +-- mysql
+
+|   |   +-- Dockerfile
+
+|   |   +-- dump.sh
+
+|   |   +-- rtodo_db.sql
+
+|   +-- server
+
+|   |   +-- app.js
+
+|   |   +-- package.json
+
+|   |   +-- package-lock.json
+
+|   |   +-- RENAME_TO.env
+
+|   +-- start.sh
+
+|   +-- stop.sh
+
++-- tests
+
+    +-- coverage
+
+    +-- unit
+
 ### Resources
 
 create-react-app docs env variables
