@@ -28,6 +28,10 @@ fi
 
 mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DB <  src/mysql/"${MYSQL_DB}.sql";
 
+mv src/server/RENAME_TO.env src/server/.env
+
+mv src/server/RENAME_TO.env src/client/.env
+
 echo "Run ./start.sh to start";
 echo "Run ./stop.sh to stop";
-echo "visit localhost:3000";
+echo "visit ${HOST}:${PORT}";
