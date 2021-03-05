@@ -10,6 +10,31 @@ Linux or Windows system running docker
 
 Expose ports 3000 (default)
 
+Client app is on localhost:3000
+
+Server app is on localhost:8082
+
+### Assignment Requirements
+
+Create a NodeJs Application with the following:
+
+Sequalize
+
+Mysql
+
+Express
+
+Rest API
+
+Todo API
+
+CRUD - Create Read Update Delete
+
+Postman
+
+Jwtn
+
+
 ## Install
 
 git clone https://github.com/andreboyce/react_todo.git
@@ -19,6 +44,8 @@ cd rtodo
 ./install.sh
 
 src/start.sh
+
+src/stop.sh # when finished
 
 ## Components
 
@@ -46,7 +73,7 @@ src/stop.sh
 
 eslint src/server src/client
 
-### directory structure
+### Directory structure
 
 +-- doc
 
