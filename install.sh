@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPTPATH=$(cd -- \"$(dirname $0)\" >/dev/null 2>&1 ; pwd -P);
+
 # check if user is root
 if [[ $EUID -ne 0 ]]; 
    then
@@ -85,7 +87,8 @@ REACT_APP_SERVER_PORT=8082;
 REACT_APP_SERVER_HOST=$PUBLIC_IP;
 
 # change working directory to the directory the script exists in which should be rtodo/src
-cd "$(dirname "$0")";
+echo "SCRIPTPATH: $SCRIPTPATH";
+cd "$SCRIPTPATH";
 echo $(pwd);
 
 touch src/client/.env;
