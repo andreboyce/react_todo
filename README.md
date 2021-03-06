@@ -30,6 +30,14 @@ start.sh
 
 stop.sh \# when finished
 
+### Login
+
+http://localhost:8082
+
+username: rtodo@localhost
+
+password: 0om4hthuAL4@
+
 ### Commands
 
 ./start # start react client and node api server
@@ -75,3 +83,5 @@ eslint src/server src/client
 create-react-app docs env variables
 
 https://create-react-app.dev/docs/advanced-configuration/
+
+https://reactrouter.com/web/example/basic

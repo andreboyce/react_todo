@@ -1,5 +1,21 @@
 import React, { Component } from 'react';
 
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiInputBase: {
+      input: {
+        background: "#ffffff",
+      },
+    },
+  },
+});
+
 //const util = require('util');
 
 class LoginForm extends Component {
@@ -80,39 +96,50 @@ class LoginForm extends Component {
     }
 
     render() {
-        console.log( "LoginForm render this.state.isLoggedin: " + this.state.isLoggedin );
+
+        //console.log( "LoginForm render this.state.isLoggedin: " + this.state.isLoggedin );
         //this.props.parentCallback( this.state );
         if( this.state.isLoggedin === true )
         {
             return (
-
                     <div>
                        You are now logged in.
                        {/* Token: {this.state.token} */}
                     </div>
-                );
+            );
         }
         else
         {
             return (
-                <div className="FormCenter">
-                    <form onSubmit={this.handleSubmit} className="FormFields">
-                    <div className="FormField">
-                        <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
-                        <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
-                        </div>
-        
-                        <div className="FormField">
-                        <label className="FormField__Label" htmlFor="password">Password</label>
-                        <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
-                        </div>
-        
-                        <div className="FormField">
-                            <button className="FormField__Button mr-20">Sign In</button> {/*<Link to="/" className="FormField__Link">Create an account</Link>*/}
+                <ThemeProvider theme={theme}>
+                    <div className="FormCenter">
+                        <form onSubmit={this.handleSubmit} className="FormFields">
+                            <div className="FormField">
+                                {/*<label className="FormField__Label" htmlFor="email">E-Mail Address</label> <br/>*/}
+                                {/*<input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} /><br/>*/}
+                                <TextField type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} label="Email Address" variant="filled" /><br/>
+                                {/*<input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} style={{ height: 40, borderColor: 'gray', borderWidth: 1 }} />*/}
                             </div>
-                    </form>
+                            
+                            <br/>
+            
+                            <div className="FormField">
+                                {/*<label className="FormField__Label" htmlFor="password">Password</label> <br/>*/}
+                                {/*<input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />*/}
+                                <TextField type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} label="Password" variant="filled" /><br/>
+                            </div>
+                            
+                            <br/>
+            
+                            <div className="FormField">
+                                <Button variant="contained" type="submit">Sign In</Button> <br/>
+                                {/*<button className="FormField__Button mr-20">Sign In</button> <br/>*/}
+                                {/*<Link to="/" className="FormField__Link">Create an account</Link>*/}
+                            </div>
+                        </form>
                     </div>
-                );
+                </ThemeProvider>
+            );
         }
     }
 }
