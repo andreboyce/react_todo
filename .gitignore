@@ -1,5 +1,6 @@
 # ignore these directories
 node_modules
+.npm
 
 # ignore these files
 index.php
@@ -7,3 +8,4 @@ index.html
 src/client/.env
 src/server/.env
 install_test.sh
+tests/api/postman/env_live.json

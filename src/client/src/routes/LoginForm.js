@@ -22,6 +22,7 @@ class LoginForm extends Component {
         let login = this.props.parentObject.parentGetCallback("login");
         this.state.token = login.token;
         this.state.isLoggedin = login.isLoggedin;
+        //console.log( 'login.token: ' + login.token );
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);

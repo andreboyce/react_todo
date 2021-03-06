@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
-
-//const util = require('util');
 
 var moment = require('moment');
 
 class UpdateForm extends Component {
     constructor(props) {
         super(props);
-
-        //this.apihost = "localhost";
-        //this.apiport = 8082;
 
         this.apihost = process.env.REACT_APP_SERVER_HOST;
         this.apiport = process.env.REACT_APP_SERVER_PORT;
@@ -146,7 +140,6 @@ class UpdateForm extends Component {
                     <div className="FormField">
                         <button className="FormField__Button mr-20">Update</button>
                     </div>
-                    {/*  <Link to="/" className="FormField__Link">Home</Link> */}
                     </form>
                 </div>
             </div>

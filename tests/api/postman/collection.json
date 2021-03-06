@@ -1,0 +1,138 @@
+{
+	"variables": [],
+	"info": {
+		"name": "rtodo postman api test",
+		"_postman_id": "dea22241-a352-0598-0aea-56feaabe3f40",
+		"description": "rtodo postman api test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/todo/create",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/todo/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"id\": 0,\n   \"name\": \"Assignment\",\n   \"description\": \"Todo API\\r\\n\\r\\nUsing Node\\r\\nSequalize\\r\\nMysql\\r\\nExpress\\r\\nRest Api\\r\\nPostman\\r\\nCRUD\\r\\n\\r\\nBonus Points\\r\\nJWTN\",\n   \"date\": \"2018-10-19\"\n}"
+				},
+				"description": "create"
+			},
+			"response": []
+		},
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/todo/get",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/todo/get",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "get"
+			},
+			"response": []
+		},
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/todo/get/:id",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/todo/get/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "get/2"
+			},
+			"response": []
+		},
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/todo/update/:id",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/todo/update/6",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Assignment 6\",\n   \"description\": \"Todo API\",\n   \"date\": \"2018-10-19\"\n}\n"
+				},
+				"description": "update/2"
+			},
+			"response": []
+		},
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/todo/delete/:id",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/todo/delete/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "delete/1"
+			},
+			"response": []
+		},
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/login",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"email\": \"rtodo@localhost\",\n   \"password\": \"0om4hthuAL4@\"\n}"
+				},
+				"description": "login"
+			},
+			"response": []
+		},
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/protected no auth",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/protected",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"email\": \"rtodo@localhost\",\n   \"password\": \"0om4hthuAL4@\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{protocol}}{{host}}:{{port}}/api/protected auth",
+			"request": {
+				"url": "{{protocol}}{{host}}:{{port}}/api/protected",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+                        "value": "client eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7InBhc3N3b3JkIjoiNTVkODE5YjgyNjA4ZjMyMDc4YjA2OWM2ZmZlODlkMDAiLCJlbWFpbCI6InJ0b2RvQGxvY2FsaG9zdCJ9LCJpYXQiOjE2MTUwNDE5NTl9.jN9Yp2Ha5X5botNL6fMGAZ_YZqS_Bm7k0kwQvENN-U8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"email\": \"rtodo@localhost\",\n   \"password\": \"0om4hthuAL4@\"\n}"
+				},
+				"description": "login"
+			},
+			"response": []
+		}
+	]
+}

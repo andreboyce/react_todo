@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-import './App.css';
+import './app.css';
 
 import LoginForm from './routes/LoginForm';
 import LogOutPage from './routes/LogOutPage';
@@ -160,11 +160,6 @@ class App extends Component {
                         <Link to="/todo">Todo List Manage</Link><br/>
                    </div>) : 
                   (<div><Link to='/login'>Login</Link><br/></div>) }
-                {/*<Link to="/login">Login</Link>*/} {/*| <Link to="/signup">SignUp</Link><br/>*/}{/*<br/>*/}
-                {/*<Link to="/todo/create">Todo List Create</Link><br/>*/}
-                {/*<Link to="/todo/update">Todo List Update</Link><br/>*/}
-                {/*<Link to="/todo/delete">Todo List Delete</Link><br/>*/}
-                {/*<Link to="/todo">Todo List Manage</Link><br/>*/}
                 <Switch>
                   <Route exact path="/" component={this.Home} />
                   <Route exact path="/login" component={this.Login} />
@@ -173,7 +168,6 @@ class App extends Component {
                   <Route exact path="/todo" component={this.TodoListManage} />
                   <Route exact path="/todo/create" component={this.TodoListCreate} />
                   <Route exact path="/todo/update/:id" component={this.TodoListUpdate} />
-                  {/*<Route exact path="/todo/update/:id" render={({props})=>{ <TodoListUpdate props={props} />}} />*/}
                   <Route exact path="/todo/delete/:id" component={this.TodoListDelete} />
                 </Switch>
              </div>

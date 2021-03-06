@@ -18,9 +18,12 @@
   color: white;
 }
 
+.App-header a {
+   color: #ee2233;
+}
+
 .App-link {
   color: #61dafb;
-  color: #ff0000;
 }
 
 @keyframes App-logo-spin {

@@ -1,0 +1,24 @@
+{
+    "id": "1",
+    "name": "env_live",
+    "values": [
+        {
+            "key": "port",
+            "value": "8082",
+            "type": "text",
+            "enabled": true
+        },
+        {
+            "key": "host",
+            "value": "localhost",
+            "type": "text",
+            "enabled": true
+        },
+        {
+            "key": "protocol",
+            "value": "http://",
+            "type": "text",
+            "enabled": true
+        }
+    ]
+}

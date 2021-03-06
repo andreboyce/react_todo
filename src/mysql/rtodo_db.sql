@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 02, 2021 at 10:07 AM
+-- Generation Time: Mar 06, 2021 at 09:17 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.12
 
@@ -39,9 +39,22 @@ CREATE TABLE `todo` (
 --
 
 INSERT INTO `todo` (`id`, `name`, `description`, `date`) VALUES
-(1, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
 (2, 'Item 2', 'Bonus Points\r\nJWTN', '2018-10-19'),
-(3, 'Item 3', 'Mysql', '2018-10-19');
+(3, 'Item 3', 'Mysql', '2018-10-19'),
+(4, '888', '555', '2021-03-03'),
+(5, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(6, 'Assignment 6', 'Todo API', '2018-10-19'),
+(7, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(8, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(9, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(10, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(11, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(12, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(13, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(14, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(15, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(16, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19'),
+(17, 'Assignment', 'Todo API\r\n\r\nUsing Node\r\nSequalize\r\nMysql\r\nExpress\r\nRest Api\r\nPostman\r\nCRUD\r\n\r\nBonus Points\r\nJWTN', '2018-10-19');
 
 -- --------------------------------------------------------
 
@@ -61,7 +74,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `secret`) VALUES
-(1, 'mobile@andreboyce.com', 'ea3a9e02f58fa4bf813744b07cbf5168', '0');
+(1, 'mobile@andreboyce.com', 'ea3a9e02f58fa4bf813744b07cbf5168', '0'),
+(3, 'rtodo@localhost', '55d819b82608f32078b069c6ffe89d00', '0');
 
 --
 -- Indexes for dumped tables
@@ -87,13 +101,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `todo`
 --
 ALTER TABLE `todo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'primary key', AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'primary key', AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
