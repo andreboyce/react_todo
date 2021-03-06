@@ -8,27 +8,43 @@ Linux server capable of running Mysql and NodeJS concurrently
 
 Linux (or Windows System running docker)
 
-Expose ports 3000 (default)
+Expose (client) ports 3000 (default)
+
+Optional Expose (server) ports 8082 (default)
 
 Client app ( React Creat App ) is on localhost:3000
 
 Server app ( NodeJS Express API ) is on localhost:8082
 
-Database - Mysql
+Active Mysql Database
 
 ## Install
 
 git clone https://github.com/andreboyce/react_todo.git
 
-mv react_todo rtodo
-
-cd rtodo
+cd react_todo
 
 ./install.sh
 
-src/start.sh
+start.sh
 
-src/stop.sh # when finished
+stop.sh \# when finished
+
+### Commands
+
+./start # start react client and node api server
+
+./stop # stop client and server api
+
+./restart # stop then restart server. will kill all nppm and node processes from the current user
+
+./test.sh # run automated tests
+
+./push.sh # push to github
+
+### Tests
+
+./test.sh
 
 ### Assignment Requirements
 
@@ -50,81 +66,9 @@ Postman
 
 Bonus Points JWTN
 
-## Commands
-
-#### start server
-
-src/start.sh
-
-#### start client
-
-src/stop.sh
-
-#### Push changes to guthub
-
-./push.sh
-
 #### Coding standards
 
 eslint src/server src/client
-
-### Directory structure
-
-+-- install.sh
-
-+-- LICENSE
-
-+-- push.sh
-
-+-- README.md
-
-+-- src
-
-|   +-- client
-
-|   |   +-- build
-
-|   |   +-- Dockerfile
-
-|   |   +-- package.json
-
-|   |   +-- package-lock.json
-
-|   |   +-- public
-
-|   |   +-- RENAME_TO.env
-
-|   |   +-- src
-
-|   |   +-- wait-for-it.sh
-
-|   +-- mysql
-
-|   |   +-- Dockerfile
-
-|   |   +-- dump.sh
-
-|   |   +-- rtodo_db.sql
-
-|   +-- server
-
-|   |   +-- app.js
-
-|   |   +-- package.json
-
-|   |   +-- package-lock.json
-
-|   |   +-- RENAME_TO.env
-
-|   +-- start.sh
-
-|   +-- stop.sh
-
-+-- tests
-
-|   +-- coverage
-
-|   +-- unit
 
 ### Resources
 
