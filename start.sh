@@ -5,12 +5,11 @@ dir_path=$(dirname $full_path);
 
 # change working directory to the directory the script exists in which should be rtodo/src
 cd $dir_path;
-cd server;
+cd "src/server";
 node app.js &
-RTODO_SERVER_PID=$!;
 
 cd $dir_path;
-cd client;
+cd "src/client";
 (npm run start | cat &);
 
 cd $dir_path;
