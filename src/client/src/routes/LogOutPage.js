@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //const util = require('util');
 
@@ -28,10 +28,9 @@ class LogOutPage extends Component {
 
     render() {
             return (
-                    <div>
-                       You are now logged out.
-                    </div>
-                   );
+                <div>You are now logged out.<br/>
+                <Link to="/">Home</Link><br/></div>
+            );
     }
 }
 

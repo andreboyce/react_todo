@@ -78,10 +78,18 @@ Bonus Points JWTN
 
 eslint src/server src/client
 
-### Resources
+#### Todo
 
-create-react-app docs env variables
+Update install instructions. Seems you may need to create a database before hand.
+
+Sign up Page
+
+Maybe some unit tests.
+
+### Resources
 
 https://create-react-app.dev/docs/advanced-configuration/
 
 https://reactrouter.com/web/example/basic
+
+https://material-ui.com/getting-started/learn/

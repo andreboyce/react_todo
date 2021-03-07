@@ -161,7 +161,7 @@ class App extends Component {
                   (<div><Link to='/logout'>Logout</Link><br/>
                         <Link to="/todo">Todo List Manage</Link><br/>
                    </div>) : 
-                  (<div><Link to='/login'>Login</Link><br/></div>) }
+                  (<div>{/*<Link to='/login'>Login</Link><br/>*/}</div>) }
                 <Switch>
                   <Route exact path="/" component={this.Home} />
                   <Route exact path="/login" component={this.Login} />
